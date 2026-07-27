@@ -1,5 +1,11 @@
 # 📘 AI Knowledge Transfer & SOP Builder
 
+![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.32%2B-FF4B4B?logo=streamlit&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-local--first-003B57?logo=sqlite&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![No API key required](https://img.shields.io/badge/API%20key-not%20required-brightgreen)
+
 A local-first web application that transforms unstructured process notes,
 handoff information, and operational knowledge into a **structured knowledge
 transfer package** — complete with SOPs, a RACI matrix, risk and gap logs,
@@ -7,6 +13,20 @@ action trackers, onboarding plans, and handoff checklists.
 
 Built with **Python + Streamlit + SQLite**. Runs entirely offline. **No API key
 or internet connection required.**
+
+---
+
+## Screenshots
+
+> Add your own screenshots to make the repo page shine. Save images to a
+> `docs/` folder and reference them here. Suggested captures:
+
+| Builder (input + generated package) | Maturity Dashboard |
+| --- | --- |
+| ![Builder](docs/screenshot-builder.png) | ![Dashboard](docs/screenshot-dashboard.png) |
+
+<!-- Tip: run the app (run_app.bat), open http://localhost:8501, and use your OS
+screenshot tool. Delete this section if you prefer a text-only README. -->
 
 ---
 
