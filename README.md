@@ -16,20 +16,6 @@ or internet connection required.**
 
 ---
 
-## Screenshots
-
-> Add your own screenshots to make the repo page shine. Save images to a
-> `docs/` folder and reference them here. Suggested captures:
-
-| Builder (input + generated package) | Maturity Dashboard |
-| --- | --- |
-| ![Builder](docs/screenshot-builder.png) | ![Dashboard](docs/screenshot-dashboard.png) |
-
-<!-- Tip: run the app (run_app.bat), open http://localhost:8501, and use your OS
-screenshot tool. Delete this section if you prefer a text-only README. -->
-
----
-
 ## 1. Project Overview
 
 Knowledge lives in people's heads, scattered spreadsheets, and email threads.
