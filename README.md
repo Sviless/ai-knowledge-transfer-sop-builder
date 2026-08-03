@@ -14,6 +14,13 @@ action trackers, onboarding plans, and handoff checklists.
 Built with **Python + Streamlit + SQLite**. Runs entirely offline. **No API key
 or internet connection required.**
 
+> **At a glance** — A portfolio project demonstrating: a clean, testable
+> **provider architecture** (rule-based Template Engine + optional LLM backend),
+> an explainable **maturity-scoring model** (8 weighted dimensions), local
+> **SQLite persistence**, and **Markdown/CSV exports** — all in a polished
+> Streamlit UI. Clone it and run with a single command (see
+> [Setup Instructions](#6-setup-instructions)).
+
 ---
 
 ## 1. Project Overview
