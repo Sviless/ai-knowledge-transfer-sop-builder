@@ -1,10 +1,13 @@
 # 📘 AI Knowledge Transfer & SOP Builder
 
+[![Live Demo](https://img.shields.io/badge/▶_Live_Demo-Streamlit_Cloud-FF4B4B?logo=streamlit&logoColor=white)](https://ai-knowledge-transfer-sop-builder.streamlit.app/)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.32%2B-FF4B4B?logo=streamlit&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-local--first-003B57?logo=sqlite&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![No API key required](https://img.shields.io/badge/API%20key-not%20required-brightgreen)
+
+**▶️ Try it live:** https://ai-knowledge-transfer-sop-builder.streamlit.app/
 
 A local-first web application that transforms unstructured process notes,
 handoff information, and operational knowledge into a **structured knowledge
