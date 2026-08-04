@@ -1,2 +1,7 @@
 streamlit>=1.32
 pandas>=2.0
+
+# ---- Optional: LLM Enhanced Mode ----
+# The app runs fully offline in Template Engine Mode without these.
+# Install only the SDK for the provider you set via LLM_PROVIDER.
+# google-genai>=0.3.0      # LLM_PROVIDER=gemini (Google Gemini)
