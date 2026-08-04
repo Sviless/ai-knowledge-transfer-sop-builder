@@ -163,11 +163,12 @@ management, operations, and applied-AI roles:
 - **Process documentation & operational excellence**: SOPs, RACI, checklists.
 - **Knowledge management & business continuity**: handoff readiness and risk reduction.
 - **Software engineering**: clean modular architecture, local persistence, exports.
-- **LLM-ready design**: a clear seam for adding an LLM Enhanced Mode later.
+- **LLM-ready design**: a working Google Gemini backend plus a clean seam for
+  additional providers.
 
 ## 10. Possible Future Enhancements
 
-- **Fully wired LLM Enhanced Mode** (add a provider SDK call in `llm_provider.py`).
+- **Additional LLM backends** (wire up the OpenAI/Azure/Claude example seams).
 - **Document upload** (paste-in files, meeting transcripts).
 - **PDF and DOCX export** in addition to Markdown/CSV.
 - **RAG-based document Q&A** over saved packages.
@@ -197,8 +198,8 @@ mode is always shown above the generated package.
 
 ### 2. LLM Enhanced Mode (optional)
 
-- A clean provider interface (`src/providers/`) ready to connect to OpenAI,
-  Azure OpenAI, Anthropic Claude, or another LLM.
+- A clean provider interface (`src/providers/`) with a **working Google Gemini**
+  backend, plus documented seams for OpenAI, Azure OpenAI, and Anthropic Claude.
 - Reads its credential from the **`LLM_API_KEY`** environment variable. Keys are
   never hardcoded.
 - **Not required to run the app.** If `LLM_API_KEY` is not set, the app
@@ -207,24 +208,37 @@ mode is always shown above the generated package.
   enhances narrative sections via the LLM. Any error during enhancement falls
   back gracefully to the template output — the app never crashes.
 
-**Enabling LLM Enhanced Mode (when you add a provider SDK):**
+**Enabling LLM Enhanced Mode with Google Gemini:**
 
 ```powershell
 # Windows (PowerShell) - set the key for the current session
-$env:LLM_API_KEY = "your-key-here"
+pip install google-genai
+$env:LLM_API_KEY = "your-gemini-key"
+$env:LLM_PROVIDER = "gemini"
+$env:LLM_MODEL = "gemini-2.0-flash"   # optional; this is the default
 python -m streamlit run app.py
 ```
 
 ```bash
 # macOS / Linux
-export LLM_API_KEY="your-key-here"
+pip install google-genai
+export LLM_API_KEY="your-gemini-key"
+export LLM_PROVIDER="gemini"
 python -m streamlit run app.py
 ```
 
-The LLM integration point is clearly marked in
-`src/providers/llm_provider.py` (`LLMProvider._enhance_with_llm`), with example
-snippets for OpenAI, Azure OpenAI, and Claude. Add one SDK call there to enable
-true LLM generation — no other files need to change.
+Select the backend with **`LLM_PROVIDER`**:
+
+| `LLM_PROVIDER` | Backend | Default `LLM_MODEL` | Status |
+| --- | --- | --- | --- |
+| `gemini` / `google` | Google Gemini | `gemini-2.0-flash` | Implemented |
+| `openai` | OpenAI | `gpt-4o-mini` | Example seam |
+| `azure` | Azure OpenAI | `gpt-4o-mini` | Example seam |
+| `anthropic` | Anthropic Claude | — | Example seam |
+
+The integration point is in `src/providers/llm_provider.py`
+(`LLMProvider._enhance_with_llm`). The Gemini backend is fully wired; add an SDK
+call for the other providers to enable them. See `.env.example` for a template.
 
 ## How Template Engine Mode Works
 
